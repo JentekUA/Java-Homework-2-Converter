@@ -9,11 +9,17 @@ public class Main {
         System.out.println("Version 1.0.");
 
         double miles = 5;
+        double kilometers = 12;
         double convertedMiles = convMilesToKilometers(miles);
-        System.out.println("Result is " + convertedMiles + " miles.");
+        double convertedKilometers = convKilometersToMiles(kilometers);
+        System.out.println("Result is " + convertedMiles + " miles and " + convertedKilometers + " kilometers.");
     }
 
     private static double convMilesToKilometers(double miles) {
         return miles * CONV_K;
+    }
+
+    private static double convKilometersToMiles(double kilometers) {
+        return kilometers / CONV_K;
     }
 }
